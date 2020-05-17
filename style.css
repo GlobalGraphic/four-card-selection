@@ -1,0 +1,121 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 1.6rem;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1.primary-heading {
+    font-weight: 200;
+    color: hsl(234, 12%, 34%);
+}
+
+h2.secondary-heading {
+    font-weight: 600;
+    color: hsl(234, 12%, 34%);
+}
+
+p.paragraph {
+    font-weight: 400;
+    color: hsl(229, 6%, 66%);
+    font-size: 16px;
+}
+
+section.main > div.headings {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.row {
+  max-width: 114rem;
+  margin: 0 auto;
+  margin-top: 7rem;
+}
+
+.row:not(:last-child) {
+  margin-bottom: 8rem;
+}
+
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.row [class^="col-"] {
+  float: left;
+}
+
+.row .col-1-of-3 {
+  width: calc((100% - 2 * 3rem) / 3);
+  background-color: hsl(0, 0%, 98%);
+  height: 10rem;
+  margin: 1rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 2rem;
+}
+
+#middle {
+   transform: translate(-50%, -50%);
+   position: absolute;
+   top: 40%;
+   left: 48.49%;
+}
+
+#two { 
+  margin-top: 8rem;
+}
+
+.row .col-1-of-3:nth-child(1) {
+  border-top: 3px solid hsl(180, 62%, 55%);
+}
+
+.row .col-1-of-3:nth-child(2) {
+  border-top: 3px solid hsl(34, 97%, 64%);
+}
+
+.row .col-1-of-3:nth-child(3) {
+  border-top: 3px solid hsl(0, 78%, 62%);
+}
+
+.row .col-1-of-3:nth-child(4) {
+  border-top: 3px solid hsl(212, 86%, 64%);
+}
+
+img.icons {
+  float: right;
+  margin-top: 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+  #middle {
+    display: block;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    top: 90%;
+    left: 48.49%;
+    margin: .3rem;
+    margin-top: 12rem;
+  }
+
+  #two {
+    margin-top: 15rem;
+  }
+
+  .row .col-1-of-3 {
+    width: 80%;
+    height: 10rem;
+    margin: 10%;
+  }
+}
